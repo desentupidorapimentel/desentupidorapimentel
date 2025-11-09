@@ -73,17 +73,17 @@
 </a>
 
 <footer>
-    <div class="container">        <p>&copy; 2025 <strong>Desentupidora em Curitiba no Topo</strong> • CNPJ 00.000.000/0001-00</p>
+    <div class="container">        <p>&copy; 2025 <strong>Desentupidora em Curitiba no Topo</strong></p>
         <p>Curitiba - PR • Atendimento 24h em toda a cidade</p>
     </div>
 </footer>
 
 <!-- SCRIPT SEO DINÂMICO -->
 <script>
-    const bairros = ["Abranches","Água Verde","Ahú","Alto Boqueirão","Alto da Glória","Alto da XV","Atuba","Augusta","Bacacheri","Bairro Alto","Barreirinha","Batel","Boa Vista","Bom Retiro","Boqueirão","Butiatuvinha","Cabral","Cachoeira","Cajuru","Campina do Siqueira","Campo Comprido","Campo de Santana","Capão da Imbuia","Capão Raso","Cascatinha","Centro","Centro Histórico","Caximba","Centro Cívico","Champagnat","Cidade Industrial","CIC","Cristo Rei","Fanny","Fazendinha","Ganchinho","Guabirotuba","Guaíra","Hauer","Hugo Lange","Jardim Botânico","Jardim Social","Jardim das Américas","Juvevê","Lamenha Pequena","Lindóia","Mercês","Mossunguê (Ecoville)","Novo Mundo","Orleans","Parolin","Pilarzinho","Pinheirinho","Portão","Prado Velho","Rebouças","Riviera","Santa Cândida","Santa Felicidade","Santa Quitéria","Santo Inácio","São Braz","São Francisco","São João","São Lourenço","São Miguel","Seminário","Sítio Cercado","Taboão","Tarumã","Tatuquara","Tingui","Uberaba","Umbará","Vila Izabel","Vista Alegre","Xaxim","Bairro Novo"];    
-	const servicos = ["desentupidora","desentupimento de pia","desentupidora de vaso","desentupidora de ralo","desentupidora de Mictorio","desentupidora de Coluna Predial","desentupidora de esgoto","limpeza de caixa de gordura","hidrojateamento"];    function slugify(text) {
+    const bairros = ["Abranches","Curitiba","Água Verde","Ahú","Alto Boqueirão","Alto da Glória","Alto da XV","Atuba","Augusta","Bacacheri","Bairro Alto","Barreirinha","Batel","Boa Vista","Bom Retiro","Boqueirão","Butiatuvinha","Cabral","Cachoeira","Cajuru","Campina do Siqueira","Campo Comprido","Campo de Santana","Capão da Imbuia","Capão Raso","Cascatinha","Centro","Centro Histórico","Caximba","Centro Cívico","Champagnat","Cidade Industrial","CIC","Cristo Rei","Fanny","Fazendinha","Ganchinho","Guabirotuba","Guaíra","Hauer","Hugo Lange","Jardim Botânico","Jardim Social","Jardim das Américas","Juvevê","Lamenha Pequena","Lindóia","Mercês","Mossunguê (Ecoville)","Novo Mundo","Orleans","Parolin","Pilarzinho","Pinheirinho","Portão","Prado Velho","Rebouças","Riviera","Santa Cândida","Santa Felicidade","Santa Quitéria","Santo Inácio","São Braz","São Francisco","São João","São Lourenço","São Miguel","Seminário","Sítio Cercado","Taboão","Tarumã","Tatuquara","Tingui","Uberaba","Umbará","Vila Izabel","Vista Alegre","Xaxim","Bairro Novo"];    
+	const servicos = ["Desentupidora","Desentupidora de Pia","Desentupidora de Vaso","Desentupidora de Ralo","Desentupidora de Mictorio","Desentupidora de Coluna Predial","Desentupidora de Esgoto","Limpeza de Caixa de Gordura","Limpa Fossa","Hidrojateamento"];    function slugify(text) {
         return text.toLowerCase()            .normalize('NFD')            .replace(/[\u0300-\u036f]/g, '')            .replace(/[^a-z0-9]+/g, '-')            .replace(/^-+|-+$/g, '');} function updateSEO(bairro) {
-        const servico = servicos[Math.floor(Math.random() * servicos.length)];        const title = `${servico.charAt(0).toUpperCase() + servico.slice(1)} em${bairro}, Curitiba PR | 24h Desentupidora no Topo`;        const desc = `${servico} urgente em${bairro}, Curitiba. Atendemos 24h com orçamento grátis. WhatsApp: (41) 99188-7007`;        const url =`https://desentupidoraemcuritibanotopo.pages.dev/${slugify(servico)}-${slugify(bairro)}-curitiba`;        document.getElementById('dynamic-title').textContent = title;
+        const servico = servicos[Math.floor(Math.random() * servicos.length)];        const title = `${servico.charAt(0).toUpperCase() + servico.slice(1)} em${bairro}, Curitiba PR | 24h Desentupidora Pimentel`;        const desc = `${servico} urgente em${bairro}, Curitiba. Atendemos 24h com orçamento grátis. WhatsApp: (41) 99188-7007`;        const url =`https://desentupidorapimentel.com.br/${slugify(servico)}-${slugify(bairro)}-curitiba`;        document.getElementById('dynamic-title').textContent = title;
         document.getElementById('dynamic-desc').setAttribute('content', desc);        
         let canonical = document.getElementById('dynamic-canonical');        if (!canonical) {
             canonical = document.createElement('link');            canonical.rel = 'canonical';
@@ -96,7 +96,7 @@
         const container = document.getElementById('bairros-container');        const countSpan = document.getElementById('bairro-count');        countSpan.textContent = bairros.length;
 
         bairros.forEach(bairro => {
-            const servico = servicos[Math.floor(Math.random() * servicos.length)];            const url =`https://desentupidoraemcuritibanotopo.pages.dev/${slugify(servico)}-${slugify(bairro)}-curitiba`;            const item = document.createElement('div');            item.className = 'bairro-item';
+            const servico = servicos[Math.floor(Math.random() * servicos.length)];            const url =`https://desentupidorapimentel.com.br/${slugify(servico)}-${slugify(bairro)}-curitiba`;            const item = document.createElement('div');            item.className = 'bairro-item';
             item.innerHTML =`<a href="${url}">${servico} em${bairro}</a>`;            container.appendChild(item);        });} function getUrlParam() {
         const params = new URLSearchParams(window.location.search);        return params.get('bairro');} window.onload = function() {
         renderBairros();        const urlBairro = getUrlParam();        if (urlBairro && bairros.map(b => slugify(b)).includes(slugify(urlBairro))) {
